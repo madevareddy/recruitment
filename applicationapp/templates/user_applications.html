@@ -1,0 +1,13 @@
+<ul>
+{% for each in applications %}
+	<li><a href="/application_details/{{each.id}}">{{each.first_name}} {{each.last_name}}</a>
+	{% if each.status == "approved"%}
+	&nbsp&nbsp Approved
+        {% elif each.status == "rejected"%}
+	&nbsp&nbsp Rejected
+	{% endif %}
+	</li>
+{% endfor%}
+</ul>
+
+	

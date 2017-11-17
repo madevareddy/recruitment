@@ -1,0 +1,19 @@
+<label style="display: inline-block;width: 100px; margin-top: 10px;"> First Name</label>:
+<label>{{application_info.first_name}}</label><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Last Name</label>:
+<label>{{application_info.last_name}}</label><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Qualification</label>:
+<label>{{application_info.qualification}}</label><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Email</label>:
+<label>{{application_info.email}}</label><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Modile</label>:
+<label>{{application_info.mobile}}</label><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;"> Other Details</label>:
+<label>{{application_info.others}}</label><br>
+{% if application_info.status == ""%}
+   <a href="/update_user_status/{{application_info.id}}/approved"> Accept</a>&nbsp
+   <a href="/update_user_status/{{application_info.id}}/rejected"> Reject</a>
+{% else%}
+<label style="display: inline-block;width: 100px; margin-top: 10px;"> Status</label>:
+<label>{{application_info.status}}</label>
+{% endif %}

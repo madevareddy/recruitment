@@ -1,0 +1,20 @@
+{% if message %}
+	{{message}}
+{% endif %}
+<form action="/" method="post">
+{% csrf_token%}
+<label style="display: inline-block;width: 100px; margin-top: 10px;">First Name</label>
+<input type="text" name="first_name"></input><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Last Name</label>
+<input type="text" name="last_name"></input><br>
+<label style="display: inline-block;width: 100px;  margin-top: 10px;">Qualification</label>
+<input type="text" name="qualification"></input><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Email Id</label>
+<input type="text" name="email"></input><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Mobile</label>
+<input type="text" name="mobile"></input><br>
+<label style="display: inline-block;width: 100px; margin-top: 10px;">Other details</label>
+<input type="text" name="others"></input><br>
+<input type="submit" value="Submit"></input>
+</form>
+<a href="/login">Login as Admin</a>
